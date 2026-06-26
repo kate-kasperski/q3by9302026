@@ -390,7 +390,7 @@
             <button class="nav-tab" onclick="showTab('m6')">🏀 Milestone 6</button>
             <button class="nav-tab" onclick="showTab('upgrades')">⬆️ Upgrades</button>
             <button class="nav-tab" onclick="showTab('perks')">🎫 Ticket Perks</button>
-            <button class="nav-tab" onclick="showTab('unlock')">🔓 Codeless Unlock</button>
+            <button class="nav-tab" onclick="showTab('unlock')">🔧 PAS Other Work</button>
             <button class="nav-tab" onclick="showTab('analysis')">📈 Feasibility Analysis</button>
             <button class="nav-tab" onclick="showTab('recommendations')">💡 Recommendations</button>
         </div>
@@ -579,22 +579,22 @@
                 <div class="milestone-card">
                     <div class="milestone-header">
                         <div>
-                            <div class="milestone-title">Codeless Unlock INTL (1 Epic)</div>
+                            <div class="milestone-title">PAS Other Work (7 Epics)</div>
                             <div class="stat-detail">Target: September 30, 2026</div>
                         </div>
                         <span class="badge badge-danger">0% Complete</span>
                     </div>
-                    <p><strong>Focus:</strong> PAS-541: Account Linking Code across RAS ecosystem for EDP INTL unlock flows (9w)</p>
+                    <p><strong>Focus:</strong> Codeless Unlock INTL (9w), GA Section Pricing (9w), RTB Work (9w), Dependency Modernization (15w), EU-Central Region (5w), Unplanned Support Buffers (10w)</p>
                     <div class="stats-grid" style="margin-top: 1rem;">
                         <div>
                             <div class="stat-label">Epics</div>
-                            <div style="font-size: 1.5rem; font-weight: 600; color: var(--tm-blue);">1</div>
-                            <div class="stat-detail">PAS-541 (Backlog)</div>
+                            <div style="font-size: 1.5rem; font-weight: 600; color: var(--tm-blue);">7</div>
+                            <div class="stat-detail">PAS-541, PAS-22, PAS-540, PAS-26, PAS-639, PAS-721, PAS-720</div>
                         </div>
                         <div>
                             <div class="stat-label">Total Engineering Weeks</div>
-                            <div style="font-size: 1.5rem; font-weight: 600; color: var(--warning);">9w</div>
-                            <div class="stat-detail">Lightweight scope, related to GEDP-6779</div>
+                            <div style="font-size: 1.5rem; font-weight: 600; color: var(--warning);">48w</div>
+                            <div class="stat-detail">Mixed priority: critical unlock/pricing + RTB + buffers</div>
                         </div>
                     </div>
                 </div>
@@ -1146,16 +1146,16 @@
             </div>
         </div>
 
-        <!-- CODELESS UNLOCK TAB -->
+        <!-- PAS OTHER WORK TAB -->
         <div id="unlock" class="tab-content">
             <div class="section">
-                <h2 class="section-title">🔓 Codeless Unlock - RAS Integration for EDP INTL (1 Epic)</h2>
+                <h2 class="section-title">🔧 PAS Other Work (7 Epics - 48 Engineering Weeks)</h2>
 
                 <div class="alert alert-info">
-                    <strong>ℹ️ About Codeless Unlock (PAS-541)</strong><br>
-                    Integrates codeless unlockable offers into RAS by implementing Account Linking Code across the entire RAS ecosystem and integrating with the Offer Unlock Service (OUS) and Global Unlock Service. Supports sponsorship, password, and TM Member unlock types for international EDP markets.<br><br>
-                    <strong>Related Frontend:</strong> GEDP-6779 (Codeless Unlock for LN All Access - M5, In Progress)<br>
-                    <strong>Cloned from:</strong> PAS-24 (completed NA version)
+                    <strong>ℹ️ About PAS Other Work</strong><br>
+                    This tab contains PAS epics that support Q3 2026 commitments but don't fit neatly into M5, M6, Upgrades, or Ticket Perks categories. Includes codeless unlock for international markets, GA section pricing support, RTB (Run the Business) work, dependency modernization, EU region expansion, and unplanned support buffers.<br><br>
+                    <strong>Total Engineering Weeks:</strong> 48 weeks across 7 epics<br>
+                    <strong>Note:</strong> PAS-444 (Abuse Protection) is tracked under M6 tab.
                 </div>
 
                 <table>
@@ -1165,7 +1165,6 @@
                             <th>Title</th>
                             <th>Eng Weeks</th>
                             <th>Status</th>
-                            <th>RAG Status</th>
                             <th>Notes</th>
                         </tr>
                     </thead>
@@ -1175,40 +1174,127 @@
                             <td>RAS: Integrate Codeless Unlockable Offers into RAS for EDP INTL</td>
                             <td><strong>9.0w</strong></td>
                             <td><span class="badge badge-info">Backlog</span></td>
-                            <td><span class="badge badge-success">On Track</span></td>
-                            <td>Account Linking Code across MFX Offer Stream, AVStream, AVSC, RAS SDK. OUS + Global Unlock Service integration.</td>
+                            <td>Account Linking Code for international unlock flows. Cloned from PAS-24 (NA version). Related: GEDP-6779 (M5)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://jira.livenation.com/browse/PAS-22" target="_blank" class="epic-key">PAS-22</a></td>
+                            <td>GEDP - Support WHP pricing on GA Sections on a Reserve Event</td>
+                            <td><strong>9.0w</strong></td>
+                            <td><span class="badge badge-warning">Ready for Refinement</span></td>
+                            <td>Seat Level Pricing V2 for GA sections. RAS to surface multiple price tiers per GA section. Related: GEDP-5251, TMG-609 (M5)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://jira.livenation.com/browse/PAS-540" target="_blank" class="epic-key">PAS-540</a></td>
+                            <td>PAS Planned RTB Tickets for Q3 2026</td>
+                            <td><strong>9.0w</strong></td>
+                            <td><span class="badge badge-info">Backlog</span></td>
+                            <td>Run the Business work: Nexus 3 migration, Kafka secrets vault, Traefik ingress migration, alert reviews. Cloned from PAS-416 (Q2)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://jira.livenation.com/browse/PAS-26" target="_blank" class="epic-key">PAS-26</a></td>
+                            <td>Modernize Software Dependencies (slice 2)</td>
+                            <td><strong>15.0w</strong></td>
+                            <td><span class="badge badge-info">Backlog</span></td>
+                            <td>Upgrade to JDK 25, Spring Boot 4.x, replace EOL libraries (Hystrix, old Kafka clients). Security & compliance risk mitigation.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://jira.livenation.com/browse/PAS-639" target="_blank" class="epic-key">PAS-639</a></td>
+                            <td>RAS: EU-Central region setup</td>
+                            <td><strong>5.0w</strong></td>
+                            <td><span class="badge badge-info">Backlog</span></td>
+                            <td>New RAS stack in EU-Central AWS region using istio ambient mode. Kafka replication, Fastly routing, monitoring setup.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://jira.livenation.com/browse/PAS-721" target="_blank" class="epic-key">PAS-721</a></td>
+                            <td>PAS Unplanned Support Q3 2026</td>
+                            <td><strong>5.0w</strong></td>
+                            <td><span class="badge badge-info">Backlog</span></td>
+                            <td>Buffer for unplanned support work and emergent issues. No specific stories assigned yet.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://jira.livenation.com/browse/PAS-720" target="_blank" class="epic-key">PAS-720</a></td>
+                            <td>PAS Unplanned Critical Support Q3 2026</td>
+                            <td><strong>5.0w</strong></td>
+                            <td><span class="badge badge-info">Backlog</span></td>
+                            <td>Buffer for critical unplanned work. Includes requiresDisplayIdCode field, GEAR autorouting, Nexus migration, istio security fixes.</td>
+                        </tr>
+                        <tr style="font-weight: bold; background: var(--bg-dark);">
+                            <td colspan="2"><strong>TOTAL</strong></td>
+                            <td><strong>48.0w</strong></td>
+                            <td colspan="2"><strong>7 PAS epics supporting Q3 commitments</strong></td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h3 class="section-subtitle">Scope & Key Components</h3>
-                <ul class="recommendation-list">
-                    <li>
-                        <strong>Unified Ticket Offer Model:</strong> Enhanced to support account linking and unlock metadata
-                    </li>
-                    <li>
-                        <strong>RAS Streaming Components:</strong> MFX Offer Stream, AVStream, AVSC updated with Account Linking Code
-                    </li>
-                    <li>
-                        <strong>OUS Integration:</strong> Centralized unlock service routing for password, sponsorship (PayPal, Klarna, Citi, Mastercard), and TM Member
-                    </li>
-                    <li>
-                        <strong>Dependencies:</strong> Global Unlock Service API, Fastly config (GEDP-7927), Smart Queue headers for abuse prevention
-                    </li>
-                </ul>
+                <h3 class="section-subtitle">Epic Details</h3>
 
-                <h3 class="section-subtitle">Dependencies & Related Work</h3>
-                <ul class="recommendation-list">
-                    <li>
-                        <strong>Frontend (M5):</strong> GEDP-6779 (Codeless Unlock for LN All Access) - In Progress, assigned to Brad Bensen
-                    </li>
-                    <li>
-                        <strong>Predecessor:</strong> PAS-24 (NA version) - Done
-                    </li>
-                    <li>
-                        <strong>Stories:</strong> PAS-536, PAS-702, PAS-703, PAS-704, PAS-705, PAS-706, PAS-707
-                    </li>
-                </ul>
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">PAS-541: Codeless Unlock for EDP INTL (9 weeks)</div>
+                        <span class="badge badge-info">Backlog</span>
+                    </div>
+                    <p><strong>Scope:</strong> Account Linking Code across MFX Offer Stream, AVStream, AVSC, RAS SDK. OUS + Global Unlock Service integration for sponsorship, password, and TM Member unlock types.</p>
+                    <p><strong>Related Work:</strong> GEDP-6779 (frontend, M5 In Progress), PAS-24 (completed NA version)</p>
+                    <p><strong>Dependencies:</strong> Global Unlock Service API, Fastly config (GEDP-7927), Smart Queue headers</p>
+                </div>
+
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">PAS-22: Support WHP Pricing on GA Sections (9 weeks)</div>
+                        <span class="badge badge-warning">Ready for Refinement</span>
+                    </div>
+                    <p><strong>Scope:</strong> Seat Level Pricing V2 for General Admission sections. RAS to surface multiple price tiers (e.g., 50 seats @ $50, 50 @ $100, 50 @ $150) with dynamic availability as lower tiers sell out.</p>
+                    <p><strong>Related Work:</strong> GEDP-5251 (frontend list view), TMG-609 (M5)</p>
+                    <p><strong>Stories:</strong> PAS-292 (spike), PAS-295 (AVStream sectionLevelPriceKeySet), PAS-257 (AVSC FlatBuffer), PAS-260 (Supermap schema), PAS-338 (RAS SDK), PAS-235 (E2E testing), GEDP-8420 (RAS SDK getOffers)</p>
+                </div>
+
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">PAS-540: PAS Planned RTB Tickets for Q3 2026 (9 weeks)</div>
+                        <span class="badge badge-info">Backlog</span>
+                    </div>
+                    <p><strong>Scope:</strong> Run the Business operational work. Includes Nexus 3 npm migration, Kafka Connect vault secrets, Traefik ingress migration (ISMDS, RAS, non-prod), JWT keys to vault (AVSC, OUS), alert reviews (RAS prd1565, ISMDS prd229), PageModeService error classification.</p>
+                    <p><strong>Parent:</strong> TMG-313 (EDP - Run the Business)</p>
+                    <p><strong>Key Stories:</strong> PAS-570/571 (Nexus 3), PAS-546 (Kafka secrets), PAS-681-684 (Traefik), PAS-579/768 (vault JWT), PAS-692/693 (alerts), PAS-728 (PageMode)</p>
+                </div>
+
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">PAS-26: Modernize Software Dependencies - Slice 2 (15 weeks)</div>
+                        <span class="badge badge-info">Backlog</span>
+                    </div>
+                    <p><strong>Scope:</strong> Upgrade all fan-platform Java services to JDK 25, Spring Boot 4.x, current stable versions of dependencies. Replace EOL libraries (Spring Boot 2.x EOL Nov 2023, Hystrix unmaintained, legacy Jackson/Kafka/Vert.x).</p>
+                    <p><strong>Why:</strong> Unpatched CVE exposure, compliance gaps, operational consistency, dependency rot.</p>
+                    <p><strong>Services:</strong> avstream, event-manifest-stream/service/grpc, eventdb-stream, seat-manifest-stream, mfx-inventory-stream, mfx-offers-stream, offer-unlock-service, availability-push-proxy/sse, availability-service, s3-kafka-connector, EMSC, SMStream, Campaign Stream, UDSC</p>
+                </div>
+
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">PAS-639: RAS EU-Central Region Setup (5 weeks)</div>
+                        <span class="badge badge-info">Backlog</span>
+                    </div>
+                    <p><strong>Scope:</strong> Deploy RAS stack (avstream/avsc/avpp) in new AWS EU-Central region using istio ambient mode (cost optimization). Unique configuration requires custom istio manifests.</p>
+                    <p><strong>Work:</strong> Istio ambient setup + manifests, Route 53/routing config, Kafka replication, avstream/avsc/avpp/ous updates, Fastly HTTP routing, Prometheus monitoring + federation, Grafana dashboards.</p>
+                    <p><strong>Stories:</strong> PAS-653-665 (13 stories covering full stack)</p>
+                </div>
+
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">PAS-721: Unplanned Support Q3 2026 (5 weeks)</div>
+                        <span class="badge badge-info">Backlog</span>
+                    </div>
+                    <p><strong>Purpose:</strong> Buffer capacity for unplanned support work, bug fixes, and emergent issues that arise during Q3.</p>
+                    <p><strong>Status:</strong> No specific stories assigned yet. Acts as capacity reserve.</p>
+                </div>
+
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">PAS-720: Unplanned Critical Support Q3 2026 (5 weeks)</div>
+                        <span class="badge badge-info">Backlog</span>
+                    </div>
+                    <p><strong>Purpose:</strong> Buffer for critical unplanned work requiring immediate attention.</p>
+                    <p><strong>Current Stories:</strong> PAS-767 (emstream restream for requiresDisplayIdCode), PAS-572 (Availability Service Nexus 3), PAS-760-762 (requiresDisplayIdCode field chain), PAS-726 (Marketplace Pagemode DID routing bug), PAS-785-786 (GEAR Autorouting env + PVC), PAS-789 (demo deploy fix), PAS-794 (OUS GUS error 4021), PAS-795 (istio avpp security)</p>
+                </div>
             </div>
         </div>
 
