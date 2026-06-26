@@ -665,6 +665,13 @@
                     GEDP-9109 has no engineering weeks assigned in Jira. Once estimated, this will reduce GEDP buffer.<br>
                     <strong>Action:</strong> Get engineering weeks estimate from team to validate capacity analysis.
                 </div>
+
+                <div class="alert alert-info">
+                    <strong>ℹ️ PAS-26 (Dependency Modernization, 15w): Potential to Move Out of PAS Scope</strong><br>
+                    PAS-26 aligns with the RAS Resiliency work that Charles and Emmanuel are focused on. If Lovee agrees to prioritize this work in their team's deliveries, PAS-26 (15w) can be removed from PAS Q3 scope.<br>
+                    <strong>Impact if moved:</strong> PAS work reduces from 93w to 78w, creating a 5.4w buffer with 6 devs. PAS would land ~September 26 (4 days early).<br>
+                    <strong>Action:</strong> Get Lovee's agreement that PAS-26 will be prioritized by the RAS Resiliency team.
+                </div>
             </div>
         </div>
 
@@ -1523,12 +1530,28 @@
                         <span class="badge badge-warning">Watch List</span>
                     </div>
                     <ul class="recommendation-list">
-                        <li><strong>PAS capacity achieved with descoping.</strong> 33w of lower-priority work moved to Q4 (PAS-540, PAS-26, PAS-541).</li>
+                        <li><strong>PAS over capacity by 9.6w with 6 devs.</strong> Only PAS-540 (RTB, 9w) descoped to Q4. PAS lands ~October 15 (2 weeks late).</li>
+                        <li><strong>PAS-26 (Dependencies, 15w) opportunity:</strong> This work aligns with RAS Resiliency that Charles and Emmanuel are focused on. If Lovee agrees to prioritize it in their team, PAS-26 can move out of PAS scope. Would reduce PAS from 93w to 78w, creating 5.4w buffer and landing ~September 26.</li>
                         <li><strong>M6 Estimation Confidence: ~50%.</strong> Haven't stopped dev for detailed story pointing yet. GEDP buffer (20w) could shrink further once M6 epics are fully estimated.</li>
                         <li><strong>GEDP-7881 (Ticket Packages Phase 2, 12w):</strong> Jumped from 2w to 12w — consumed 10w of GEDP buffer in one update.</li>
                         <li><strong>GEDP-9109 (Performance Improvements):</strong> No engineering weeks estimate yet. Once estimated, this will reduce GEDP buffer further.</li>
                         <li><strong>GEDP-7833 (M5 Event Launch, 25w):</strong> Largest single GEDP epic. Any growth erodes buffer significantly.</li>
                         <li><strong>PAS-624 (Resiliency Phase 2, 15w):</strong> Tripled from 5w. Now the second-largest PAS epic in Q3 scope.</li>
+                    </ul>
+                </div>
+
+                <div class="milestone-card">
+                    <div class="milestone-header">
+                        <div class="milestone-title">Option: Move PAS-26 to RAS Resiliency Team</div>
+                        <span class="badge badge-success">Opportunity</span>
+                    </div>
+                    <p><strong>Strategy:</strong> PAS-26 (Dependency Modernization, 15w) aligns with RAS Resiliency work that Charles and Emmanuel are focused on. If Lovee agrees to prioritize this in their team's deliveries, it can be removed from PAS Q3 scope.</p>
+                    <ul class="recommendation-list">
+                        <li><strong>Impact:</strong> PAS work reduces from 93w to 78w, creating 5.4w buffer with 6 devs</li>
+                        <li><strong>Timeline:</strong> PAS would land ~September 26 (4 days early) instead of October 15 (2 weeks late)</li>
+                        <li><strong>Alignment:</strong> Work directly supports RAS Resiliency goals</li>
+                        <li><strong>Action Required:</strong> Get Lovee's agreement that this will be prioritized by the RAS Resiliency team</li>
+                        <li><strong>DRI:</strong> Kate Kasperski / Lovee</li>
                     </ul>
                 </div>
 
@@ -1574,20 +1597,27 @@
                         <strong>DRI:</strong> Kate Kasperski / Engineering Management
                     </li>
                     <li>
-                        <strong>⚡ PRIORITY 2: Get GEDP-9109 (Performance Improvements) Estimated</strong><br>
+                        <strong>⚡ PRIORITY 2: Move PAS-26 (Dependency Modernization, 15w) to RAS Resiliency Team</strong><br>
+                        <strong>Opportunity:</strong> PAS-26 aligns with RAS Resiliency work that Charles and Emmanuel are focused on. If moved to their team, PAS reduces from 93w to 78w.<br>
+                        <strong>Action:</strong> Get Lovee's agreement that PAS-26 will be prioritized by the RAS Resiliency team instead of PAS<br>
+                        <strong>Impact:</strong> PAS would have 5.4w buffer with 6 devs and land ~September 26 (4 days early) instead of October 15<br>
+                        <strong>DRI:</strong> Kate Kasperski / Lovee
+                    </li>
+                    <li>
+                        <strong>⚡ PRIORITY 3: Get GEDP-9109 (Performance Improvements) Estimated</strong><br>
                         <strong>Problem:</strong> GEDP-9109 has no engineering weeks in Jira — this is unaccounted work that reduces GEDP buffer<br>
                         <strong>Action:</strong> Get engineering estimate from team this week<br>
                         <strong>Impact:</strong> If >30w, GEDP buffer is consumed — pull additional from Optimize Pod<br>
                         <strong>DRI:</strong> Sean Vergara / Engineering Leads
                     </li>
                     <li>
-                        <strong>📊 PRIORITY 3: PAS-624 Resiliency Phase 2 (15w) — Tripled in Size</strong><br>
+                        <strong>📊 PRIORITY 4: PAS-624 Resiliency Phase 2 (15w) — Tripled in Size</strong><br>
                         <strong>Epic:</strong> PAS-624 (15 weeks, was 5w) - Largest single increase this cycle (+10w)<br>
                         <strong>Risk:</strong> DR spikes, observability work, and rebootstrap strategy all in scope. Could grow further.<br>
                         <strong>DRI:</strong> Mo Shareef / Robert Lawrence
                     </li>
                     <li>
-                        <strong>📊 PRIORITY 4: GEDP-7833 (M5 Event Launch, 25w) — Largest Epic</strong><br>
+                        <strong>📊 PRIORITY 5: GEDP-7833 (M5 Event Launch, 25w) — Largest Epic</strong><br>
                         <strong>Epic:</strong> GEDP-7833 (25 weeks) - Single largest remaining epic across both teams<br>
                         <strong>Risk:</strong> Consumes 17% of GEDP capacity alone. Must maintain scope control.<br>
                         <strong>DRI:</strong> Engineering Leads
