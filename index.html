@@ -397,13 +397,13 @@
 
         <!-- OVERVIEW TAB -->
         <div id="overview" class="tab-content active">
-            <div class="alert alert-success" style="margin-bottom: 1.5rem;">
-                <strong>✅ CAPACITY: BOTH TEAMS WITHIN CAPACITY — HITS SEPTEMBER 30 DEADLINE</strong><br>
-                Both GEDP and PAS teams can hit 9/30 with current scope and team size adjustments.<br><br>
-                <strong>✅ PAS (6 devs):</strong> 78w work vs 83.4w capacity = <strong>5.4w BUFFER</strong><br>
+            <div class="alert alert-warning" style="margin-bottom: 1.5rem;">
+                <strong>⚠️ CAPACITY: PAS SLIGHTLY OVER WITH 6 DEVS — MISSES SEPT 30 BY ~2 WEEKS</strong><br>
+                GEDP is within capacity. PAS with 6 devs is 9.6w over capacity.<br><br>
+                <strong>❌ PAS (6 devs):</strong> 93w work vs 83.4w capacity = <strong>9.6w OVER CAPACITY</strong><br>
                 <strong>✅ GEDP (12 devs):</strong> 146.8w work vs 166.8w capacity = <strong>20.0w BUFFER</strong><br><br>
                 <strong>📊 Current Progress:</strong> M5: 44% complete (12 Done/Sign-off of 27 total), M6: 13% complete (2 Done of 15 total), Upgrades: 0%, Ticket Perks: In Progress<br>
-                <strong>✅ VERDICT: PAS needs +1 developer (5→6). Descoped PAS-540 (RTB) and PAS-26 (Dependencies) to achieve buffer. Lands ~September 26.</strong><br>
+                <strong>⚠️ VERDICT: PAS with 6 devs (5+1) lands ~October 15. Descoped only PAS-540 (RTB, 9w) to Q4. Need ~0.7 more devs to hit Sept 30.</strong><br>
                 <strong>Note:</strong> Dashboard shows GEDP and PAS epics only (excludes GEDP-5305 Club Site).
             </div>
 
@@ -446,24 +446,24 @@
                     <div class="stat-detail">6 developers × 13.9 weeks till 9/30</div>
                 </div>
 
-                <div class="stat-card" style="border-left: 4px solid var(--success);">
+                <div class="stat-card" style="border-left: 4px solid var(--danger);">
                     <div class="stat-label">PAS Remaining Work</div>
-                    <div class="stat-value" style="color: var(--success);">~78</div>
-                    <div class="stat-detail">9 incomplete PAS epics</div>
+                    <div class="stat-value" style="color: var(--danger);">~93</div>
+                    <div class="stat-detail">10 incomplete PAS epics</div>
                 </div>
 
-                <div class="stat-card" style="border-left: 4px solid var(--success);">
-                    <div class="stat-label">PAS Capacity Buffer</div>
-                    <div class="stat-value" style="color: var(--success);">+5.4</div>
-                    <div class="stat-detail">WITHIN CAPACITY</div>
-                    <div class="stat-detail" style="margin-top: 0.5rem; font-style: italic;"><strong>6 developers (current 5 + 1 additional)</strong></div>
+                <div class="stat-card" style="border-left: 4px solid var(--danger);">
+                    <div class="stat-label">PAS Capacity Gap</div>
+                    <div class="stat-value" style="color: var(--danger);">-9.6</div>
+                    <div class="stat-detail">OVER CAPACITY</div>
+                    <div class="stat-detail" style="margin-top: 0.5rem; font-style: italic;"><strong>6 developers (current 5 + 1 additional) — lands ~Oct 15</strong></div>
                 </div>
 
-                <div class="stat-card" style="border-left: 4px solid var(--success);">
+                <div class="stat-card" style="border-left: 4px solid var(--warning);">
                     <div class="stat-label">PAS Required Team</div>
-                    <div class="stat-value" style="color: var(--success);">6.0</div>
+                    <div class="stat-value" style="color: var(--warning);">~6.7</div>
                     <div class="stat-detail">Developers needed for 9/30 delivery</div>
-                    <div class="stat-detail" style="margin-top: 0.5rem; font-style: italic;">Current: 5 | Need: +1 dev | Lands: ~Sept 26</div>
+                    <div class="stat-detail" style="margin-top: 0.5rem; font-style: italic;">Current: 5 | With 6: lands ~Oct 15 (2 weeks late)</div>
                 </div>
             </div>
 
@@ -471,8 +471,8 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-label">Total Scope (GEDP + PAS)</div>
-                    <div class="stat-value">34</div>
-                    <div class="stat-detail">47 total - 13 complete = 34 remaining<br>(16 M5 + 13 M6 + 3 Upgrades + 2 Perks + 0 Other)</div>
+                    <div class="stat-value">35</div>
+                    <div class="stat-detail">48 total - 13 complete = 35 remaining<br>(16 M5 + 13 M6 + 3 Upgrades + 2 Perks + 1 Other)</div>
                 </div>
 
                 <div class="stat-card">
@@ -640,10 +640,11 @@
                     <strong>Note:</strong> Healthy buffer — no descoping required. Monitor GEDP-7833 (25w Event Launch) as largest single epic.
                 </div>
 
-                <div class="alert alert-success">
-                    <strong>✅ PAS Team Within Capacity (5.4w buffer)</strong><br>
-                    PAS has 78 weeks of work with 83.4 weeks available (6 devs × 13.9 weeks). <strong>5.4 weeks of buffer.</strong><br>
-                    <strong>Descoped:</strong> PAS-540 (RTB Tickets, 9w) and PAS-26 (Dependency Modernization, 15w) moved to Q4 2026.<br>
+                <div class="alert alert-warning">
+                    <strong>⚠️ PAS Team Slightly Over Capacity (-9.6w gap)</strong><br>
+                    PAS has 93 weeks of work with 83.4 weeks available (6 devs × 13.9 weeks). <strong>9.6 weeks over capacity.</strong><br>
+                    <strong>Descoped:</strong> Only PAS-540 (RTB Tickets, 9w) moved to Q4 2026. PAS-26 (Dependencies, 15w) and PAS-541 (Codeless Unlock INTL, 9w) remain in Q3.<br>
+                    <strong>Impact:</strong> PAS lands ~October 15 (2 weeks late) with 6 devs. Need ~0.7 more devs or additional descoping to hit Sept 30.<br>
                     <strong>Action:</strong> Pull 1 developer from other projects/Tech Ops for PAS (5→6 devs).
                 </div>
 
@@ -1162,13 +1163,13 @@
         <!-- PAS OTHER WORK TAB -->
         <div id="unlock" class="tab-content">
             <div class="section">
-                <h2 class="section-title">🔧 PAS Other Work (Descoped to Q4 2026)</h2>
+                <h2 class="section-title">🔧 PAS Other Work (1 Epic Descoped to Q4 2026)</h2>
 
                 <div class="alert alert-warning">
-                    <strong>⚠️ Descoped to Q4 2026</strong><br>
-                    The following PAS epics have been moved to Q4 2026 to achieve capacity balance for the September 30 deadline. Total descoped work: 33 engineering weeks across 3 epics.<br><br>
-                    <strong>Q3 Impact:</strong> Removing these epics reduces PAS work from 102w to 78w, allowing PAS to hit 9/30 with 6 developers (current 5 + 1 additional).<br>
-                    <strong>Note:</strong> PAS-444 (Abuse Protection) and PAS-541 (Codeless Unlock INTL) are also descoped to Q4.
+                    <strong>⚠️ PAS-540 Descoped to Q4 2026</strong><br>
+                    PAS-540 (RTB Tickets, 9w) has been moved to Q4 2026. This is lower-priority operational work (Nexus 3, Kafka secrets, Traefik ingress, alert reviews).<br><br>
+                    <strong>Q3 Impact:</strong> Descoping PAS-540 reduces PAS work from 102w to 93w. With 6 developers (83.4w capacity), PAS still has a 9.6w gap and lands ~October 15 (2 weeks late).<br>
+                    <strong>Note:</strong> PAS-26 (Dependencies, 15w) and PAS-541 (Codeless Unlock INTL, 9w) remain in Q3 scope.
                 </div>
 
                 <table>
@@ -1183,48 +1184,32 @@
                     </thead>
                     <tbody>
                         <tr style="background: rgba(229, 62, 62, 0.05);">
-                            <td><a href="https://jira.livenation.com/browse/PAS-541" target="_blank" class="epic-key">PAS-541</a></td>
-                            <td>RAS: Integrate Codeless Unlockable Offers into RAS for EDP INTL</td>
-                            <td><strong>9.0w</strong></td>
-                            <td><span class="badge badge-danger">Descoped to Q4</span></td>
-                            <td>Account Linking Code for international unlock flows. Moved to Q4 2026.</td>
-                        </tr>
-                        <tr style="background: rgba(229, 62, 62, 0.05);">
                             <td><a href="https://jira.livenation.com/browse/PAS-540" target="_blank" class="epic-key">PAS-540</a></td>
                             <td>PAS Planned RTB Tickets for Q3 2026</td>
                             <td><strong>9.0w</strong></td>
                             <td><span class="badge badge-danger">Descoped to Q4</span></td>
-                            <td>Run the Business work. Moved to Q4 2026 to achieve capacity balance.</td>
-                        </tr>
-                        <tr style="background: rgba(229, 62, 62, 0.05);">
-                            <td><a href="https://jira.livenation.com/browse/PAS-26" target="_blank" class="epic-key">PAS-26</a></td>
-                            <td>Modernize Software Dependencies (slice 2)</td>
-                            <td><strong>15.0w</strong></td>
-                            <td><span class="badge badge-danger">Descoped to Q4</span></td>
-                            <td>Dependency upgrades. Moved to Q4 2026 to achieve capacity balance.</td>
+                            <td>Run the Business work: Nexus 3, Kafka secrets vault, Traefik ingress, alert reviews. Operational improvements not blocking customer features. Moved to Q4 2026.</td>
                         </tr>
                         <tr style="font-weight: bold; background: rgba(229, 62, 62, 0.1);">
                             <td colspan="2"><strong>TOTAL DESCOPED</strong></td>
-                            <td><strong>33.0w</strong></td>
-                            <td colspan="2"><strong>3 PAS epics moved to Q4 2026</strong></td>
+                            <td><strong>9.0w</strong></td>
+                            <td colspan="2"><strong>1 PAS epic moved to Q4 2026</strong></td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h3 class="section-subtitle">Rationale for Descoping</h3>
+                <h3 class="section-subtitle">Rationale for Descoping PAS-540</h3>
 
                 <div class="milestone-card">
                     <div class="milestone-header">
-                        <div class="milestone-title">Why These Epics Were Descoped</div>
+                        <div class="milestone-title">Why PAS-540 Was Descoped</div>
                         <span class="badge badge-info">Strategic Decision</span>
                     </div>
-                    <p><strong>Context:</strong> To achieve the September 30 deadline with 6 PAS developers (current 5 + 1 additional), 33 weeks of lower-priority work was moved to Q4 2026.</p>
+                    <p><strong>Context:</strong> PAS-540 (RTB Tickets, 9w) is operational work that does not block customer-facing M5/M6 features.</p>
                     <ul class="recommendation-list">
-                        <li><strong>PAS-541 (Codeless Unlock INTL, 9w):</strong> International unlock flows not required for M5/M6 NA/CA launches. Can follow in Q4.</li>
-                        <li><strong>PAS-540 (RTB Tickets, 9w):</strong> Operational improvements (Nexus 3, Kafka secrets, Traefik) not blocking customer-facing features.</li>
-                        <li><strong>PAS-26 (Dependencies, 15w):</strong> Technical debt and compliance work can be deferred one quarter without immediate risk.</li>
+                        <li><strong>PAS-540 (RTB Tickets, 9w):</strong> Operational improvements including Nexus 3 npm migration, Kafka Connect vault secrets, Traefik ingress migration, JWT keys to vault, and alert reviews. These are "Run the Business" tasks that improve operational efficiency but do not block customer features.</li>
                     </ul>
-                    <p style="margin-top: 1rem;"><strong>Impact:</strong> Reduces PAS work from 102w to 78w, creating a 5.4-week buffer with 6 developers. All customer-facing M5/M6 commitments remain in scope.</p>
+                    <p style="margin-top: 1rem;"><strong>Impact:</strong> Reduces PAS work from 102w to 93w. With 6 developers (83.4w capacity), PAS still has a 9.6w gap and lands ~October 15 (2 weeks late). All customer-facing M5/M6/Upgrades/Perks commitments remain in scope, including PAS-26 (Dependencies) and PAS-541 (Codeless Unlock INTL).</p>
                 </div>
             </div>
         </div>
@@ -1234,15 +1219,15 @@
             <div class="section">
                 <h2 class="section-title">📈 Feasibility Analysis for September 30, 2026</h2>
 
-                <div class="alert alert-success" style="background: rgba(56, 161, 105, 0.15);">
-                    <strong>✅ VERDICT: BOTH TEAMS WITHIN CAPACITY — HITS SEPTEMBER 30 DEADLINE</strong><br>
-                    Both GEDP and PAS teams can hit 9/30 with current scope adjustments and team size changes.<br><br>
-                    <strong>✅ PAS:</strong> 78w work / 83.4w capacity = 5.4w buffer (at 6 devs, lands ~Sept 26)<br>
+                <div class="alert alert-warning" style="background: rgba(237, 137, 54, 0.15);">
+                    <strong>⚠️ VERDICT: GEDP ON TRACK — PAS LANDS ~OCT 15 WITH 6 DEVS (2 WEEKS LATE)</strong><br>
+                    GEDP is within capacity. PAS with 6 devs is 9.6w over capacity and lands ~October 15.<br><br>
+                    <strong>⚠️ PAS:</strong> 93w work / 83.4w capacity = 9.6w OVER (at 6 devs, lands ~Oct 15)<br>
                     <strong>✅ GEDP:</strong> 146.8w work / 166.8w capacity = 20.0w buffer<br>
-                    <strong>Combined (18 devs):</strong> ~224.8w work / 250.2w capacity → 25.4w buffer ✅<br>
+                    <strong>Combined (18 devs):</strong> ~239.8w work / 250.2w capacity → 10.4w buffer ✅<br>
                     <strong>⚠️ M6 Estimation Confidence: ~50%</strong> — Haven't stopped dev for detailed story pointing on unstarted work. M6 estimates could increase, which would reduce GEDP buffer further.<br>
                     <strong>Current Progress:</strong> M5: 41% (11 of 27 Done/Sign-off), M6: 13% (2 of 16 Done), Upgrades: 0%, Perks: In Progress<br>
-                    <strong>Action:</strong> Pull 1 dev from other projects/Tech Ops for PAS (5→6). Descope PAS-540, PAS-26, PAS-541 to Q4.
+                    <strong>Action:</strong> Pull 1 dev from other projects/Tech Ops for PAS (5→6). Descope only PAS-540 to Q4. Accept 2-week delay OR pull 0.7 more devs OR descope more.
                 </div>
 
                 <h3 class="section-subtitle">Capacity Breakdown</h3>
@@ -1328,20 +1313,20 @@
                         <tr>
                             <td>Remaining Work</td>
                             <td>~146.8 eng weeks (25 epics)</td>
-                            <td>~78 eng weeks (9 epics)</td>
-                            <td>~224.8 eng weeks (34 epics)</td>
+                            <td>~93 eng weeks (10 epics)</td>
+                            <td>~239.8 eng weeks (35 epics)</td>
                         </tr>
-                        <tr style="background: rgba(56, 161, 105, 0.1); font-weight: bold;">
+                        <tr style="background: rgba(237, 137, 54, 0.1); font-weight: bold;">
                             <td>Capacity Gap/Buffer</td>
                             <td style="color: var(--success);"><strong>+20.0 weeks (12% buffer)</strong></td>
-                            <td style="color: var(--success);"><strong>+5.4 weeks BUFFER</strong></td>
-                            <td style="color: var(--success);"><strong>Both teams within capacity ✅</strong></td>
+                            <td style="color: var(--danger);"><strong>-9.6 weeks OVER</strong></td>
+                            <td style="color: var(--warning);"><strong>PAS lands ~Oct 15 (2 weeks late)</strong></td>
                         </tr>
                         <tr>
                             <td>Required Team Size</td>
                             <td>~10.6 developers</td>
-                            <td>6.0 developers (currently 5)</td>
-                            <td>~16.6 developers (currently 17)</td>
+                            <td>~6.7 developers (currently 5, planning 6)</td>
+                            <td>~17.3 developers (currently 17)</td>
                         </tr>
                         <tr style="background: rgba(56, 161, 105, 0.05);">
                             <td>Team Surplus</td>
@@ -1423,13 +1408,19 @@
                             <td>M6</td>
                             <td><span class="badge badge-info">Backlog</span></td>
                         </tr>
-                        <tr style="font-weight: bold; background: rgba(56, 161, 105, 0.1);">
+                        <tr>
+                            <td><a href="https://jira.livenation.com/browse/PAS-541" target="_blank" class="epic-key">PAS-541</a> Codeless Unlock INTL</td>
+                            <td><strong>9.0w</strong></td>
+                            <td>Other</td>
+                            <td><span class="badge badge-info">Backlog</span></td>
+                        </tr>
+                        <tr style="font-weight: bold; background: rgba(229, 62, 62, 0.1);">
                             <td><strong>TOTAL PAS</strong></td>
-                            <td><strong>78w</strong></td>
-                            <td colspan="2"><strong style="color: var(--success);">Available: 83.4w | Buffer: +5.4w ✅ (6 devs)</strong></td>
+                            <td><strong>93w</strong></td>
+                            <td colspan="2"><strong style="color: var(--danger);">Available: 83.4w | Gap: -9.6w ❌ (6 devs) — lands ~Oct 15</strong></td>
                         </tr>
                         <tr style="background: var(--bg-dark); font-style: italic;">
-                            <td colspan="4"><strong>Descoped to Q4:</strong> PAS-541 (Codeless Unlock INTL, 9w), PAS-540 (RTB Tickets, 9w), PAS-26 (Dependency Modernization, 15w)</td>
+                            <td colspan="4"><strong>Descoped to Q4:</strong> PAS-540 (RTB Tickets, 9w)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1514,15 +1505,15 @@
                                 <td>69.5w</td>
                                 <td style="color: var(--danger);"><strong>-32.5w OVER — lands ~Nov 19</strong></td>
                             </tr>
-                            <tr style="background: rgba(56, 161, 105, 0.1);">
-                                <td><strong>PAS (6 devs) — WITH +1 DEV + DESCOPE 3 EPICS TO Q4</strong></td>
-                                <td>78w</td>
+                            <tr style="background: rgba(237, 137, 54, 0.1);">
+                                <td><strong>PAS (6 devs) — WITH +1 DEV + DESCOPE PAS-540 TO Q4</strong></td>
+                                <td>93w</td>
                                 <td>83.4w</td>
-                                <td style="color: var(--success);"><strong>+5.4w — lands ~Sept 26 ✅</strong></td>
+                                <td style="color: var(--warning);"><strong>-9.6w — lands ~Oct 15 ⚠️</strong></td>
                             </tr>
                         </tbody>
                     </table>
-                    <p style="margin-top: 1rem;"><strong>What changed:</strong> PAS-777 (Canada Tax Compliance Backend, 5w) added to M6. Descoped PAS-541 (Codeless Unlock INTL, 9w), PAS-540 (RTB, 9w), and PAS-26 (Dependencies, 15w) to Q4 2026. Net PAS work: 102w → 78w (-24w). Added 1 PAS developer (5→6). GEDP-7881 (Ticket Packages Phase 2) increased from 2w to 12w (+10w), reducing GEDP buffer from 30w to 20w.</p>
+                    <p style="margin-top: 1rem;"><strong>What changed:</strong> PAS-777 (Canada Tax Compliance Backend, 5w) added to M6. Descoped only PAS-540 (RTB, 9w) to Q4 2026. PAS-26 (Dependencies, 15w) and PAS-541 (Codeless Unlock INTL, 9w) remain in Q3. Net PAS work: 102w → 93w (-9w). Added 1 PAS developer (5→6). With 6 devs, PAS lands ~October 15 (2 weeks late). GEDP-7881 (Ticket Packages Phase 2) increased from 2w to 12w (+10w), reducing GEDP buffer from 30w to 20w.</p>
                     <p style="margin-top: 0.5rem;"><strong>⚠️ Estimation confidence for M6 epics is ~50%.</strong> Due to tight deadlines, teams have not stopped development for detailed story pointing on unstarted stories. Actual effort may exceed current estimates.</p>
                 </div>
 
@@ -1574,12 +1565,13 @@
 
                 <ul class="recommendation-list">
                     <li>
-                        <strong>✅ PRIORITY 1: Pull 1 Developer from Other Projects/Tech Ops → PAS + Descope 3 Epics</strong><br>
-                        <strong>Solution:</strong> Descope PAS-540 (RTB, 9w), PAS-26 (Dependencies, 15w), and PAS-541 (Codeless Unlock INTL, 9w) to Q4 2026. Add 1 developer to PAS (5→6).<br>
+                        <strong>⚠️ PRIORITY 1: Pull 1 Developer from Other Projects/Tech Ops → PAS (Lands ~Oct 15)</strong><br>
+                        <strong>Solution:</strong> Descope only PAS-540 (RTB, 9w) to Q4 2026. Add 1 developer to PAS (5→6).<br>
                         <strong>Action:</strong> Assign 1 developer from other projects/Tech Ops to PAS work immediately<br>
                         <strong>Source:</strong> Other projects or Tech Ops teams with available capacity<br>
-                        <strong>Impact:</strong> With 6 devs (83.4w capacity) and 78w work, PAS hits 9/30 with 5.4w buffer (~Sept 26)<br>
-                        <strong>Descoped Work:</strong> 33 weeks of lower-priority operational work moved to Q4<br>
+                        <strong>Impact:</strong> With 6 devs (83.4w capacity) and 93w work, PAS lands ~October 15 (2 weeks late, 9.6w over capacity)<br>
+                        <strong>Descoped Work:</strong> 9 weeks of operational work (Nexus 3, Kafka secrets, Traefik) moved to Q4<br>
+                        <strong>Options:</strong> (1) Accept 2-week delay, (2) Pull 0.7 more devs to hit Sept 30, (3) Descope more work<br>
                         <strong>DRI:</strong> Kate Kasperski / Engineering Management
                     </li>
                     <li>
@@ -1607,20 +1599,19 @@
             <div class="section">
                 <h2 class="section-title">📅 Recommended Plan: Ship Everything (Pull 2 Devs for PAS)</h2>
 
-                <div class="alert alert-success">
-                    <strong>✅ RECOMMENDED PLAN: SHIP M5/M6/UPGRADES/PERKS BY SEPTEMBER 30 — PAS NEEDS +1 DEV, DESCOPE 3 EPICS TO Q4</strong><br><br>
-                    <strong>What Ships by 9/30:</strong><br>
+                <div class="alert alert-warning">
+                    <strong>⚠️ RECOMMENDED PLAN: M5/M6/UPGRADES/PERKS — PAS LANDS ~OCT 15 WITH 6 DEVS</strong><br><br>
+                    <strong>What Ships:</strong><br>
                     • M5 Core: All 14 remaining GEDP + 2 PAS epics (Password offers, Smart Queue, Stage Site, Backend, Landing State)<br>
-                    • M6: All 8 GEDP + 5 PAS remaining epics (League Branding, Sports Calendar, Co-Branding, Abuse Messaging, Packages Phase 2, Sponsorship, Event Launch, Performance, Backend, Resiliency Phase 2, EU-West, Availability Flapping, Canada Tax)<br>
+                    • M6: All 8 GEDP + 6 PAS epics (League Branding, Sports Calendar, Co-Branding, Abuse Messaging, Packages Phase 2, Sponsorship, Event Launch, Performance, Backend, Resiliency Phase 2, EU-West, Availability Flapping, Canada Tax)<br>
                     • Upgrades: GEDP-8881 (8w) + GEDP-5306 (9w) + PAS-1 (5w)<br>
-                    • Ticket Perks: GEDP-7536 (12w) + PAS-7 (9w)<br><br>
+                    • Ticket Perks: GEDP-7536 (12w) + PAS-7 (9w)<br>
+                    • Other: PAS-541 (Codeless Unlock INTL, 9w), PAS-26 (Dependencies, 15w)<br><br>
                     <strong>Descoped to Q4 2026:</strong><br>
-                    • PAS-541: Codeless Unlock INTL (9w)<br>
-                    • PAS-540: RTB Tickets (9w)<br>
-                    • PAS-26: Dependency Modernization (15w)<br><br>
+                    • PAS-540: RTB Tickets (9w) - operational improvements only<br><br>
                     <strong>Requirement:</strong> Pull 1 dev from other projects/Tech Ops to PAS (5→6 devs).<br>
-                    <strong>Timeline:</strong> PAS lands ~September 26 (4 days early). GEDP lands ~September 17 (13 days early).<br><br>
-                    <strong>Buffers (with 6 PAS devs):</strong> GEDP: +20.0w (12%) | PAS: +5.4w (6.5%)
+                    <strong>Timeline:</strong> GEDP lands ~September 17 (13 days early). PAS lands ~October 15 (2 weeks late).<br><br>
+                    <strong>Capacity:</strong> GEDP: +20.0w buffer (12%) ✅ | PAS: -9.6w over capacity ❌
                 </div>
 
                 <h3 class="section-subtitle">What Ships by September 30 (All Scope)</h3>
@@ -1688,22 +1679,22 @@
                             <td>1 epic (PAS-541)</td>
                             <td>9w</td>
                         </tr>
-                        <tr style="font-weight: bold; background: rgba(56, 161, 105, 0.1);">
+                        <tr style="font-weight: bold; background: rgba(237, 137, 54, 0.1);">
                             <td><strong>TOTAL SHIPS</strong></td>
                             <td></td>
-                            <td><strong>34 epics</strong></td>
-                            <td><strong>GEDP: 146.8w / 166.8w ✅ | PAS: 78w / 83.4w (with +1 dev) ✅</strong></td>
+                            <td><strong>35 epics</strong></td>
+                            <td><strong>GEDP: 146.8w / 166.8w ✅ | PAS: 93w / 83.4w (with +1 dev) ⚠️ —lands ~Oct 15</strong></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <h3 class="section-subtitle">📊 Capacity Summary (Per Team)</h3>
                 <ul class="recommendation-list">
-                    <li><strong>PAS (5 devs → 6 devs):</strong> 78w work / 83.4w capacity = ✅ WITHIN CAPACITY (5.4w buffer, 6.5%)</li>
-                    <li><strong>PAS descoped:</strong> PAS-541 (9w), PAS-540 (9w), PAS-26 (15w) moved to Q4 2026</li>
+                    <li><strong>PAS (5 devs → 6 devs):</strong> 93w work / 83.4w capacity = ⚠️ OVER CAPACITY (-9.6w gap) — lands ~October 15</li>
+                    <li><strong>PAS descoped:</strong> Only PAS-540 (RTB, 9w) moved to Q4 2026. PAS-26 (Dependencies, 15w) and PAS-541 (Codeless Unlock INTL, 9w) remain in Q3.</li>
                     <li><strong>GEDP (12 devs):</strong> 146.8w work / 166.8w capacity = ✅ WITHIN CAPACITY (20.0w buffer, 12%)</li>
-                    <li><strong>Key Actions:</strong> (1) Pull 1 dev from other projects/Tech Ops to PAS; (2) Get GEDP-9109 estimated; (3) Formalize Q4 plan for descoped PAS work</li>
-                    <li><strong>Note:</strong> All customer-facing M5/M6 commitments ship by 9/30. Operational work deferred to Q4.</li>
+                    <li><strong>Key Actions:</strong> (1) Pull 1 dev from other projects/Tech Ops to PAS; (2) Get GEDP-9109 estimated; (3) Accept 2-week delay OR pull 0.7 more devs OR descope more work</li>
+                    <li><strong>Note:</strong> All customer-facing M5/M6/Upgrades/Perks commitments remain in Q3. PAS misses Sept 30 by ~2 weeks with current scope.</li>
                 </ul>
             </div>
         </div>
@@ -1712,8 +1703,8 @@
             <p>Dashboard generated by <a href="https://claude.com/claude-code" class="footer-link" target="_blank">Claude Code</a> for Q3 2026 Commitments</p>
             <p style="margin-top: 0.5rem;"><strong>Scope:</strong> GEDP + PAS epics only - M5 (TMG-609) + M6 (TMG-610) + Upgrades + Ticket Perks + Codeless Unlock</p>
             <p style="margin-top: 0.5rem;">Last updated: June 25, 2026 | Owner: Kate Kasperski</p>
-            <p style="margin-top: 0.5rem;"><strong>Status:</strong> 34 incomplete epics | GEDP: 146.8w / 166.8w (20.0w buffer) ✅ | PAS: 78w / 83.4w (5.4w buffer) ✅ — needs +1 dev from other projects/Tech Ops</p>
-            <p style="margin-top: 0.5rem;"><strong>Excluded:</strong> Non-GEDP/PAS epics (CTHOST-6551, TM1UP-3360, GCO-5716, GDISCO-4436, GEDP-5305, TMSPON-29809) | <strong>Added:</strong> PAS-759 (5w), PAS-444 (9w), PAS-777 (5w) | <strong>Descoped to Q4:</strong> PAS-541 (9w), PAS-540 (9w), PAS-26 (15w)</p>
+            <p style="margin-top: 0.5rem;"><strong>Status:</strong> 35 incomplete epics | GEDP: 146.8w / 166.8w (20.0w buffer) ✅ | PAS: 93w / 83.4w (-9.6w over) ⚠️ — needs +1 dev, lands ~Oct 15</p>
+            <p style="margin-top: 0.5rem;"><strong>Excluded:</strong> Non-GEDP/PAS epics (CTHOST-6551, TM1UP-3360, GCO-5716, GDISCO-4436, GEDP-5305, TMSPON-29809) | <strong>Added:</strong> PAS-759 (5w), PAS-444 (9w), PAS-777 (5w) | <strong>Descoped to Q4:</strong> PAS-540 (9w)</p>
         </footer>
     </div>
 
